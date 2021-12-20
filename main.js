@@ -27,8 +27,8 @@ function createMainWindow() {
     },
   })
 
-  //if (isDev) {
-  //  mainWindow.webContents.openDevTools()
+//  if (isDev) {
+ //  mainWindow.webContents.openDevTools()
  // }
 
   mainWindow.loadFile('./app/index.html')
@@ -65,19 +65,18 @@ const menu = [
       },
     ]
   },
-  ...(isDev
-    ? [
-        {
-          label: 'Developer',
-          submenu: [
-            { role: 'reload' },
-            { role: 'forcereload' },
-            { type: 'separator' },
-            //{ role: 'toggledevtools' },
-          ],
-        },
-      ]
-    : []),
+ // ...(isDev
+  //  ? [
+   //     {
+    //      label: 'Developer',
+     //    submenu: [
+     //       { role: 'reload' },
+      //     { role: 'forcereload' },
+      //     { type: 'separator' },
+      //     { role: 'toggledevtools' },
+     ///  },
+     // ]
+    //: []),
 ]
 
 app.on('window-all-closed', () => {
